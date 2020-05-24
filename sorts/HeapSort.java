@@ -1,4 +1,4 @@
-package com.heap;
+package com.sort;
 
 import java.util.Arrays;
 
@@ -9,6 +9,12 @@ import java.util.Arrays;
  *
  */
 public class HeapSort {
+	public static void main(String[] args) {
+		int[] arr = { 3, 4, 9, 6, 5, 4, 8, 1, 10, -1, 0 };
+		HeapSort.heapSort(arr);
+		System.out.println(Arrays.toString(arr));
+
+	}
 
 	/**
 	 * 堆排序
@@ -19,7 +25,6 @@ public class HeapSort {
 		int size = arr.length;
 		// 1.构造大根堆
 		heapInsert(arr);
-		System.out.println(Arrays.toString(arr));
 		for (int i = size - 1; i >= 0; i--) {
 			swap(arr, 0, i);
 			heapify(arr, 0, i);
@@ -67,7 +72,7 @@ public class HeapSort {
 	 * @param arr
 	 */
 	public static void heapInsert(int[] arr) {
-		for (int i = 0; i < arr.length; i++) {
+		for (int i = arr.length / 2 - 1; i < arr.length; i++) {
 			// 当前插入的索引
 			int curIndex = i;
 			// 当前插入的父亲的索引
