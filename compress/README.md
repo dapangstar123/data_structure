@@ -6,3 +6,6 @@
 ## Running Command
 * 压缩：java -jar Compress.jar 0 test.fasta test.fasta.zip
 * 解压缩：java -jar Compress.jar 1 test.fasta.zip test.txt
+
+### 说明
+* 只是简单实现霍夫曼编码思想，可能存在一些问题。
